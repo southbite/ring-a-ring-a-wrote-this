@@ -6,7 +6,9 @@ Test code, demonstrates the use of hash-rings in a pub-sub system to distribute 
 To run the example tests, which explain how the setup works:
 
 ```
-git clone
+> git clone https://github.com/southbite/ring-a-ring-a-wrote-this.git && cd ring-a-ring-a-wrote-this
+> npm install
+> npm test
 ```
 
 Distributed pub/sub using [hash-rings](https://akshatm.svbtle.com/consistent-hash-rings-theory-and-implementation). Thanks to [3rd Eden](https://github.com/3rd-Eden/node-hashring) for the implementation.
