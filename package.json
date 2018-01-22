@@ -1,0 +1,32 @@
+{
+  "name": "ring-a-ring-a-wrote-this",
+  "description": "distributed pub/sub using token rings",
+  "version": "1.0.0",
+  "main": "./lib/index",
+  "protocol": "1.0.0",
+  "scripts": {
+    "test": "mocha silence.js test",
+    "test-cover": "istanbul cover _mocha -- silence.js test"
+  },
+  "author": "Tenacious and NSOFT",
+  "license": "MIT",
+  "keywords": [
+    "hash ring",
+    "pub-sub"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happner/distributed-pubsub.git"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "hashring": "^3.2.0",
+    "hyperid": "^1.2.0",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "readmeFilename": "README.md"
+}
