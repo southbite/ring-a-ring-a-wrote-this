@@ -70,7 +70,7 @@ describe.only('connections', function () {
 
   });
 
-  it('posts data to data points', function (done) {
+  it('posts data to data points, selecting a random client for each post', function (done) {
 
     this.timeout(15000);
 
