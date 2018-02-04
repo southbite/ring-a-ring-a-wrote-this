@@ -80,6 +80,8 @@ describe.only('connections', function () {
 
       var randomClient = clients[randomIndex];
 
+      console.log('client publish:::', dataPoints[i]);
+
       randomClient.publish(dataPoints[i], {i:i, id:randomClient.address, path:dataPoints[i]});
     }
 
@@ -99,7 +101,7 @@ describe.only('connections', function () {
       if (RECEIVED[client.address] != Object.keys(client.subscriptions).length) allReceived = false;
     });
 
-    if (!allReceived) return done('some clients didnt receive messages');
+    if (!allReceived) return done('expected message');
 
     var subsDistributed = true;
 
