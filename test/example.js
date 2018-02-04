@@ -67,7 +67,24 @@ describe.only('connections', function () {
     });
 
     done();
+  });
 
+  xit('sets up wildcard subscriptions', function (done) {
+
+    clients.forEach(function(client){
+
+      for (var i = 0; i < DATA_POINTS_COUNT; i++) {
+
+        client.subscribe(dataPoints[i], function(data){
+
+          if (RECEIVED[this.address] == null) RECEIVED[this.address] = 0;
+          RECEIVED[this.address]++;
+
+        }.bind(client));
+      }
+    });
+
+    done();
   });
 
   it('posts data to data points, selecting a random client for each post', function (done) {
